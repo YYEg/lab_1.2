@@ -14,9 +14,9 @@ namespace FirstApplication.Tests
         [TestMethod()]
         public void SignChanges2Times()
         {
-            List<int> list = new List<int>() { 1, -1, 2, 4};
+            string checkNum = "5 6 -1 -5 3";
 
-            var outMessage = Logic.Check(list);
+            var outMessage = Logic.Check(checkNum);
 
             Assert.AreEqual("Знак изменился 2 раз", outMessage );
         }
@@ -24,9 +24,9 @@ namespace FirstApplication.Tests
         [TestMethod()]
         public void SignChanges3Times()
         {
-            List<int> list = new List<int>() { 1, -1, 2, -4};
+            string checkNum = "5 6 -1 5 -3";
 
-            var outMessage = Logic.Check(list);
+            var outMessage = Logic.Check(checkNum);
 
             Assert.AreEqual("Знак изменился 3 раз", outMessage);
         }
@@ -34,9 +34,9 @@ namespace FirstApplication.Tests
         [TestMethod()]
         public void SignChanges1Times()
         {
-            List<int> list = new List<int>() { 1, -1};
+            string checkNum = "5 6 1 5 -3";
 
-            var outMessage = Logic.Check(list);
+            var outMessage = Logic.Check(checkNum);
 
             Assert.AreEqual("Знак изменился 1 раз", outMessage);
         }
